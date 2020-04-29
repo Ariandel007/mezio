@@ -14,9 +14,12 @@ import lombok.NoArgsConstructor;
 public class Usuario {
 	
 	@Id
-	public Integer id;
-	public String username;
-	public String correo;
-	public String password;
+	private Integer id;
+	
+	private String username;
+	
+	private String correo;
+	
+	private String password;
 	
 }

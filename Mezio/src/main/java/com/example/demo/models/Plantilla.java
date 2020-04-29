@@ -16,14 +16,14 @@ import lombok.NoArgsConstructor;
 public class Plantilla {
 
 	@Id
-	public Integer id;
-	public double ancho;
-	public double alto;
-	public double largo;
-	public String coordenadas;
+	private Integer id;
+	private double ancho;
+	private double alto;
+	private double largo;
+	private String coordenadas;
 	
 	@ManyToOne
-    @JoinColumn(name="id")
-	public Paquete paquete;
+    @JoinColumn(name="id_Paquete")
+	private Paquete paquete;
 	
 }
