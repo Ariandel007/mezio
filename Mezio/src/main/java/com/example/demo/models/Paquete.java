@@ -16,10 +16,10 @@ import lombok.NoArgsConstructor;
 public class Paquete {
 
 	@Id
-	public Integer id;
-	public String nombre;
+	private Integer id;
+	private String nombre;
 	
 	@ManyToOne
-    @JoinColumn(name="id")
-    public Usuario usuario;
+    @JoinColumn(name="id_Usuario")
+	private Usuario usuario;
 }
