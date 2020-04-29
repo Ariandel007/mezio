@@ -17,11 +17,11 @@ public class Plantilla {
 
 	@Id
 
-	public Integer id;
-	public Double ancho;
-	public Double alto;
-	public Double largo;
-	public String coordenadas;
+	private Integer id;
+	private Double ancho;
+	private Double alto;
+	private Double largo;
+	private String coordenadas;
 
 	@ManyToOne
     @JoinColumn(name="id_Paquete")
