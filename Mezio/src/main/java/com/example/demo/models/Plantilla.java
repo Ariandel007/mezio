@@ -17,9 +17,9 @@ public class Plantilla {
 
 	@Id
 	public Integer id;
-	public double ancho;
-	public double alto;
-	public double largo;
+	public Double ancho;
+	public Double alto;
+	public Double largo;
 	public String coordenadas;
 	
 	@ManyToOne
