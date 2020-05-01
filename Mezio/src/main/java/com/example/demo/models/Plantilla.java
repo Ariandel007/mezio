@@ -39,4 +39,60 @@ public class Plantilla {
     @OneToMany(mappedBy = "plantilla")
     List<MueblePlantilla> mueblePlantillas;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Double getAncho() {
+		return ancho;
+	}
+
+	public void setAncho(Double ancho) {
+		this.ancho = ancho;
+	}
+
+	public Double getAlto() {
+		return alto;
+	}
+
+	public void setAlto(Double alto) {
+		this.alto = alto;
+	}
+
+	public Double getLargo() {
+		return largo;
+	}
+
+	public void setLargo(Double largo) {
+		this.largo = largo;
+	}
+
+	public String getCoordenadas() {
+		return coordenadas;
+	}
+
+	public void setCoordenadas(String coordenadas) {
+		this.coordenadas = coordenadas;
+	}
+
+	public Paquete getPaquete() {
+		return paquete;
+	}
+
+	public void setPaquete(Paquete paquete) {
+		this.paquete = paquete;
+	}
+
+	public List<MueblePlantilla> getMueblePlantillas() {
+		return mueblePlantillas;
+	}
+
+	public void setMueblePlantillas(List<MueblePlantilla> mueblePlantillas) {
+		this.mueblePlantillas = mueblePlantillas;
+	}
+
 }

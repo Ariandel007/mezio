@@ -33,4 +33,52 @@ public class MueblePlantilla {
     
     private Integer coordY;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Plantilla getPlantilla() {
+		return plantilla;
+	}
+
+	public void setPlantilla(Plantilla plantilla) {
+		this.plantilla = plantilla;
+	}
+
+	public Mueble getMueble() {
+		return mueble;
+	}
+
+	public void setMueble(Mueble mueble) {
+		this.mueble = mueble;
+	}
+
+	public Integer getRotacion() {
+		return rotacion;
+	}
+
+	public void setRotacion(Integer rotacion) {
+		this.rotacion = rotacion;
+	}
+
+	public Integer getCoordX() {
+		return coordX;
+	}
+
+	public void setCoordX(Integer coordX) {
+		this.coordX = coordX;
+	}
+
+	public Integer getCoordY() {
+		return coordY;
+	}
+
+	public void setCoordY(Integer coordY) {
+		this.coordY = coordY;
+	}
+
 }

@@ -53,5 +53,135 @@ public class Mueble {
     @OneToMany(mappedBy = "mueble")
     List<MueblePlantilla> mueblePlantillas;
 
+
+	public Integer getId() {
+		return id;
+	}
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+	public Double getAlto() {
+		return alto;
+	}
+
+
+	public void setAlto(Double alto) {
+		this.alto = alto;
+	}
+
+
+	public Double getLargo() {
+		return largo;
+	}
+
+
+	public void setLargo(Double largo) {
+		this.largo = largo;
+	}
+
+
+	public Double getAncho() {
+		return ancho;
+	}
+
+
+	public void setAncho(Double ancho) {
+		this.ancho = ancho;
+	}
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+
+	public String getImagen() {
+		return imagen;
+	}
+
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
+	}
+
+
+	public String getIcono() {
+		return icono;
+	}
+
+
+	public void setIcono(String icono) {
+		this.icono = icono;
+	}
+
+
+	public SubCategoria getSubCategoria() {
+		return subCategoria;
+	}
+
+
+	public void setSubCategoria(SubCategoria subCategoria) {
+		this.subCategoria = subCategoria;
+	}
+
+
+	public TiendaVirtual getTiendaVirtual() {
+		return tiendaVirtual;
+	}
+
+
+	public void setTiendaVirtual(TiendaVirtual tiendaVirtual) {
+		this.tiendaVirtual = tiendaVirtual;
+	}
+
+
+	public String getEstilo() {
+		return estilo;
+	}
+
+
+	public void setEstilo(String estilo) {
+		this.estilo = estilo;
+	}
+
+
+	public String getUrl() {
+		return url;
+	}
+
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+
+	public List<MueblePlantilla> getMueblePlantillas() {
+		return mueblePlantillas;
+	}
+
+
+	public void setMueblePlantillas(List<MueblePlantilla> mueblePlantillas) {
+		this.mueblePlantillas = mueblePlantillas;
+	}
+
     
 }
