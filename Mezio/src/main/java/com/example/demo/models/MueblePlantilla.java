@@ -27,11 +27,11 @@ public class MueblePlantilla {
     @JoinColumn(name = "id_Mueble")
     private Mueble mueble;
  
-    private Integer rotacion;
+    private Double rotacion;
     
-    private Integer coordX;
+    private Double coordX;
     
-    private Integer coordY;
+    private Double coordY;
 
 	public Integer getId() {
 		return id;
@@ -57,27 +57,27 @@ public class MueblePlantilla {
 		this.mueble = mueble;
 	}
 
-	public Integer getRotacion() {
+	public Double getRotacion() {
 		return rotacion;
 	}
 
-	public void setRotacion(Integer rotacion) {
+	public void setRotacion(Double rotacion) {
 		this.rotacion = rotacion;
 	}
 
-	public Integer getCoordX() {
+	public Double getCoordX() {
 		return coordX;
 	}
 
-	public void setCoordX(Integer coordX) {
+	public void setCoordX(Double coordX) {
 		this.coordX = coordX;
 	}
 
-	public Integer getCoordY() {
+	public Double getCoordY() {
 		return coordY;
 	}
 
-	public void setCoordY(Integer coordY) {
+	public void setCoordY(Double coordY) {
 		this.coordY = coordY;
 	}
 
