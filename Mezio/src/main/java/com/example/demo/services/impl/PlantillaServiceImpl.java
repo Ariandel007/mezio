@@ -5,9 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
 import com.example.demo.repository.PlantillaRepository;
 import com.example.demo.services.PlantillaService;
+
 
 @Service
 public class PlantillaServiceImpl implements PlantillaService{
@@ -34,6 +36,21 @@ public class PlantillaServiceImpl implements PlantillaService{
 		if(plantillaDB==null) {
 			return null;
 		}
+		
+		List<MueblePlantilla> lst = plantilla.getMueblePlantillas();
+		
+		for (int i =0; i <lst.size(); i++ )
+		{
+			MueblePlantilla aux = lst.get(i);
+			
+			if(this.thereIsCollision(lst, aux, i) == true)
+			{
+				return null;
+			}
+			
+		}	
+		
+		
 		plantillaDB.setAlto(plantilla.getAlto());
 		plantillaDB.setAncho(plantilla.getAncho());
 		plantillaDB.setCoordenadas(plantilla.getCoordenadas());
@@ -44,6 +61,21 @@ public class PlantillaServiceImpl implements PlantillaService{
 		return plantillaDB;
 	}
 
+    public boolean thereIsCollision(List<MueblePlantilla> lst, MueblePlantilla obj, int indexObj) {
+        for (int i =0; i< lst.size(); i++)
+        {
+            if (i == indexObj)
+            {
+                continue;
+            }
+            else if ((lst.get(i).getCoordX().equals(obj.getCoordX()) ) && (lst.get(i).getCoordY().equals(obj.getCoordY())) ||
+                    ( ( obj.getCoordX() > lst.get(i).getCoordX() && obj.getCoordX() < lst.get(i).getCoordX() + lst.get(i).getMueble().getAncho())
+                            && (obj.getCoordY() > lst.get(i).getCoordY() && obj.getCoordY() < lst.get(i).getCoordY() + lst.get(i).getMueble().getLargo())))
+                return true;
+        }
+        return false;
+     }
+    
 	@Override
 	public Plantilla deletePlantilla(Plantilla plantilla) {
 		Plantilla plantillaDB=plantillaRepository.findByNumberId(plantilla.getId());

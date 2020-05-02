@@ -27,6 +27,13 @@ public class SubCategoria {
 
     private String nombre;
 
+	public SubCategoria(Integer id, Categoria categoria, String nombre) {
+		super();
+		this.id = id;
+		this.categoria = categoria;
+		this.nombre = nombre;
+	}
+
 	public Integer getId() {
 		return id;
 	}

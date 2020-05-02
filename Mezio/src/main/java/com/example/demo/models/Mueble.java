@@ -37,7 +37,27 @@ public class Mueble {
 
     private String icono;
     
-    @ManyToOne
+    public Mueble(Integer id, String nombre, Double alto, Double largo, Double ancho, String descripcion, String imagen,
+			String icono, SubCategoria subCategoria, TiendaVirtual tiendaVirtual, String estilo, String url,
+			List<MueblePlantilla> mueblePlantillas) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.alto = alto;
+		this.largo = largo;
+		this.ancho = ancho;
+		this.descripcion = descripcion;
+		this.imagen = imagen;
+		this.icono = icono;
+		this.subCategoria = subCategoria;
+		this.tiendaVirtual = tiendaVirtual;
+		this.estilo = estilo;
+		this.url = url;
+		this.mueblePlantillas = mueblePlantillas;
+	}
+
+
+	@ManyToOne
     @JoinColumn(name="id_SubCategoria")
     private SubCategoria subCategoria;
     

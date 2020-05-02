@@ -33,6 +33,17 @@ public class MueblePlantilla {
     
     private Double coordY;
 
+	public MueblePlantilla(Integer id, Plantilla plantilla, Mueble mueble, Double rotacion, Double coordX,
+			Double coordY) {
+		super();
+		this.id = id;
+		this.plantilla = plantilla;
+		this.mueble = mueble;
+		this.rotacion = rotacion;
+		this.coordX = coordX;
+		this.coordY = coordY;
+	}
+
 	public Integer getId() {
 		return id;
 	}

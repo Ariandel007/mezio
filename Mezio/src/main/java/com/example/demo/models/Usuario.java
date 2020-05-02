@@ -22,6 +22,15 @@ public class Usuario {
 	
 	private String password;
 
+	
+	public Usuario(Integer id, String username, String correo, String password) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.correo = correo;
+		this.password = password;
+	}
+
 	public Integer getId() {
 		return id;
 	}

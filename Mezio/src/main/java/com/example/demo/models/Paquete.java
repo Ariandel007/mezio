@@ -23,6 +23,13 @@ public class Paquete {
     @JoinColumn(name="id_Usuario")
 	private Usuario usuario;
 
+	public Paquete(Integer id, String nombre, Usuario usuario) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.usuario = usuario;
+	}
+
 	public Integer getId() {
 		return id;
 	}

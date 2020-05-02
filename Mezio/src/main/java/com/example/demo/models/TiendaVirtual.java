@@ -22,6 +22,13 @@ public class TiendaVirtual {
     
     private String url;
 
+	public TiendaVirtual(Integer id, String nombre, String url) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.url = url;
+	}
+
 	public Integer getId() {
 		return id;
 	}

@@ -39,6 +39,18 @@ public class Plantilla {
     @OneToMany(mappedBy = "plantilla")
     List<MueblePlantilla> mueblePlantillas;
 
+	public Plantilla(Integer id, Double ancho, Double alto, Double largo, String coordenadas, Paquete paquete,
+			List<MueblePlantilla> mueblePlantillas) {
+		super();
+		this.id = id;
+		this.ancho = ancho;
+		this.alto = alto;
+		this.largo = largo;
+		this.coordenadas = coordenadas;
+		this.paquete = paquete;
+		this.mueblePlantillas = mueblePlantillas;
+	}
+
 	public Integer getId() {
 		return id;
 	}
