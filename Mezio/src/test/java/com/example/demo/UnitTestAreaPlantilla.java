@@ -10,7 +10,11 @@ import org.junit.Test;
 import com.example.demo.models.Mueble;
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
+import com.example.demo.services.AllowedAreaService;
+import com.example.demo.services.MueblePlantillaService;
 import com.example.demo.services.PlantillaService;
+import com.example.demo.services.impl.AllowedAreaServiceImpl;
+import com.example.demo.services.impl.MueblePlantillaServiceImpl;
 import com.example.demo.services.impl.PlantillaServiceImpl;
 
 public class UnitTestAreaPlantilla {
@@ -30,10 +34,10 @@ public class UnitTestAreaPlantilla {
 
 		// MueblePlantilla
 		MueblePlantilla mueblePlantilla = new MueblePlantilla(1, plantilla, mueble, 4.7, 5.4, 1.0);
-		MueblePlantilla mueblePlantilla2 = new MueblePlantilla(2, plantilla, mueble2, 4.7, 50.4, 10.0);
-		MueblePlantilla mueblePlantilla3 = new MueblePlantilla(3, plantilla, mueble2, 4.7, 50.4, 10.0);
+		MueblePlantilla mueblePlantilla2 = new MueblePlantilla(2, plantilla, mueble2, 4.7, 5.4, 1.0);
+		MueblePlantilla mueblePlantilla3 = new MueblePlantilla(3, plantilla, mueble2, 4.7, 5.4, 1.0);
 
-		PlantillaService serv = new PlantillaServiceImpl();
+		AllowedAreaService serv = new AllowedAreaServiceImpl();
 		
 
 		
@@ -41,8 +45,11 @@ public class UnitTestAreaPlantilla {
 		lst.add(mueblePlantilla);
 		lst.add(mueblePlantilla2);
 		
+		List<MueblePlantilla> lst2=new ArrayList<MueblePlantilla>();
+		lst2=lst;
+		lst2.add(mueblePlantilla3);
 		
-		assertTrue(serv.insertInPlantillaArea(lst, mueblePlantilla3, plantilla));
+		assertEquals(serv.allowedArea(lst, mueblePlantilla3, plantilla),true);
 		
 	}
 

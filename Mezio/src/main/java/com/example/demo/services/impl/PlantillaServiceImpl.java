@@ -99,6 +99,7 @@ public class PlantillaServiceImpl implements PlantillaService{
     	}
     }
     
+    
 	@Override
 	public Plantilla deletePlantilla(Plantilla plantilla) {
 		Plantilla plantillaDB=plantillaRepository.findByNumberId(plantilla.getId());
