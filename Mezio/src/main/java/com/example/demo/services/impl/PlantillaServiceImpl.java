@@ -37,19 +37,6 @@ public class PlantillaServiceImpl implements PlantillaService{
 			return null;
 		}
 		
-		List<MueblePlantilla> lst = plantilla.getMueblePlantillas();
-		
-		for (int i =0; i <lst.size(); i++ )
-		{
-			MueblePlantilla aux = lst.get(i);
-			
-			if(this.thereIsCollision(lst, aux, i) == true)
-			{
-				return null;
-			}
-			
-		}	
-		
 		
 		plantillaDB.setAlto(plantilla.getAlto());
 		plantillaDB.setAncho(plantilla.getAncho());
@@ -61,43 +48,7 @@ public class PlantillaServiceImpl implements PlantillaService{
 		return plantillaDB;
 	}
 
-    public boolean thereIsCollision(List<MueblePlantilla> lst, MueblePlantilla obj, int indexObj) {
-        for (int i =0; i< lst.size(); i++)
-        {
-            if (i == indexObj)
-            {
-                continue;
-            }
-            else if ((lst.get(i).getCoordX().equals(obj.getCoordX()) ) && (lst.get(i).getCoordY().equals(obj.getCoordY())) ||
-                    ( ( obj.getCoordX() > lst.get(i).getCoordX() && obj.getCoordX() < lst.get(i).getCoordX() + lst.get(i).getMueble().getAncho())
-                            && (obj.getCoordY() > lst.get(i).getCoordY() && obj.getCoordY() < lst.get(i).getCoordY() + lst.get(i).getMueble().getLargo())))
-                return true;
-        }
-        return false;
-     }
-    
-    public boolean insertInPlantillaArea(List<MueblePlantilla> lst, MueblePlantilla obj, Plantilla pl) {
-    	
-    	Double AreaMuebles = 0.0;
-    	Double AreaPlantilla = pl.getAncho()*pl.getLargo();
-    	Double AreaMaximaPermitida = AreaPlantilla*0.75;
-    	for (int i=0;i<lst.size();i++) {
-    		AreaMuebles = AreaMuebles + (lst.get(i).getMueble().getAncho()*lst.get(i).getMueble().getLargo());
-    	}
-    	Double Areaobj=obj.getMueble().getAncho()*obj.getMueble().getLargo();
-    	//System.out.println(AreaMuebles);
-    	//System.out.println(AreaPlantilla);
-    	//System.out.println(Areaobj);
-    	Double AreaNuevaMuebles = AreaMuebles + Areaobj;
-    	//System.out.println(AreaNuevaMuebles);
-    	if(AreaNuevaMuebles > AreaMaximaPermitida) {
-    		
-    		return false;
-    	}
-    	else {
-    		return true;
-    	}
-    }
+  
     
     
 	@Override

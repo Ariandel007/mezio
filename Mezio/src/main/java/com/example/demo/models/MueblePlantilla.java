@@ -44,6 +44,10 @@ public class MueblePlantilla {
 		this.coordY = coordY;
 	}
 
+	public MueblePlantilla() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

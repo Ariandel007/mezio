@@ -57,6 +57,11 @@ public class Mueble {
 	}
 
 
+	public Mueble() {
+		super();
+	}
+
+
 	@ManyToOne
     @JoinColumn(name="id_SubCategoria")
     private SubCategoria subCategoria;

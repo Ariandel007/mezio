@@ -34,6 +34,10 @@ public class SubCategoria {
 		this.nombre = nombre;
 	}
 
+	public SubCategoria() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

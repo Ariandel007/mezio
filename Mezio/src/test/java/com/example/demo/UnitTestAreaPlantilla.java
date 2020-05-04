@@ -49,7 +49,7 @@ public class UnitTestAreaPlantilla {
 		lst2=lst;
 		lst2.add(mueblePlantilla3);
 		
-		assertEquals(serv.allowedArea(lst, mueblePlantilla3, plantilla),true);
+		assertFalse(serv.allowedArea(lst, mueblePlantilla3, plantilla));
 		
 	}
 

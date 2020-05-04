@@ -12,6 +12,5 @@ public interface MueblePlantillaService {
 	MueblePlantilla createMueblePlantilla(MueblePlantilla MueblePlantilla);
 	MueblePlantilla updateMueblePlantilla(MueblePlantilla MueblePlantilla);
 	MueblePlantilla deleteMueblePlantilla(MueblePlantilla MueblePlantilla);
-	boolean allowedArea(List<MueblePlantilla> lst, MueblePlantilla obj, Plantilla pl);
 	MueblePlantilla getMueblePlantilla(Integer id);
 }

@@ -51,6 +51,10 @@ public class Plantilla {
 		this.mueblePlantillas = mueblePlantillas;
 	}
 
+	public Plantilla() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

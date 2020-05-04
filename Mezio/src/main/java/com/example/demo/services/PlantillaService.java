@@ -12,7 +12,5 @@ public interface PlantillaService {
 	Plantilla createPlantilla(Plantilla Plantilla);
 	Plantilla updatePlantilla(Plantilla Plantilla);
 	Plantilla deletePlantilla(Plantilla Plantilla);
-    boolean thereIsCollision(List<MueblePlantilla> lst, MueblePlantilla obj, int indexObj);
-    boolean insertInPlantillaArea(List<MueblePlantilla> lst, MueblePlantilla obj, Plantilla pl);
 	Plantilla getPlantilla(Integer id);
 }

@@ -26,6 +26,9 @@ public class Categoria {
 		this.id = id;
 		this.nombre = nombre;
 	}
+	public Categoria() {
+		super();
+	}
 	public Integer getId() {
 		return id;
 	}

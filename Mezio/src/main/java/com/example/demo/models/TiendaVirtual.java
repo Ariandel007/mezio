@@ -29,6 +29,10 @@ public class TiendaVirtual {
 		this.url = url;
 	}
 
+	public TiendaVirtual() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}
