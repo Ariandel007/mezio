@@ -63,7 +63,7 @@ public class MuebleServiceImpl implements MuebleService{
 	@Override
 	public Mueble getMueble(Integer id) {
 		Mueble muebleDB=muebleRepository.findByNumberId(id);
-		if(muebleDB!=null) {
+		if(muebleDB==null) {
 			return null;
 		}
 		return muebleDB;

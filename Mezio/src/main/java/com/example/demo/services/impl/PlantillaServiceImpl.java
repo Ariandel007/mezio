@@ -23,7 +23,7 @@ public class PlantillaServiceImpl implements PlantillaService{
 	@Override
 	public Plantilla createPlantilla(Plantilla plantilla) {
 		Plantilla PlantillaDB=plantillaRepository.findByNumberId(plantilla.getId());
-		if(PlantillaDB!=null) {
+		if(PlantillaDB==null) {
 			return null;
 		}
 		PlantillaDB=plantillaRepository.save(plantilla);
@@ -54,7 +54,7 @@ public class PlantillaServiceImpl implements PlantillaService{
 	@Override
 	public Plantilla deletePlantilla(Plantilla plantilla) {
 		Plantilla plantillaDB=plantillaRepository.findByNumberId(plantilla.getId());
-		if(plantillaDB!=null) {
+		if(plantillaDB==null) {
 			return null;
 		}
 		plantillaRepository.delete(plantillaDB);
@@ -64,7 +64,7 @@ public class PlantillaServiceImpl implements PlantillaService{
 	@Override
 	public Plantilla getPlantilla(Integer id) {
 		Plantilla plantillaDB=plantillaRepository.findByNumberId(id);
-		if(plantillaDB!=null) {
+		if(plantillaDB==null) {
 			return null;
 		}
 		return plantillaDB;

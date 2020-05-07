@@ -43,7 +43,7 @@ public class PaqueteServiceImpl implements PaqueteService{
 	@Override
 	public Paquete deletePaquete(Paquete paquete) {
 		Paquete paqueteDB=paqueteRepository.findByNumberId(paquete.getId());
-		if(paqueteDB!=null) {
+		if(paqueteDB==null) {
 			return null;
 		}
 		paqueteRepository.delete(paqueteDB);
@@ -53,7 +53,7 @@ public class PaqueteServiceImpl implements PaqueteService{
 	@Override
 	public Paquete getPaquete(Integer id) {
 		Paquete paqueteDB=paqueteRepository.findByNumberId(id);
-		if(paqueteDB!=null) {
+		if(paqueteDB==null) {
 			return null;
 		}
 		return paqueteDB;

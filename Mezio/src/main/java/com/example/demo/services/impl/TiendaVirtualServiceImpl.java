@@ -43,7 +43,7 @@ public class TiendaVirtualServiceImpl implements TiendaVirtualService{
 	@Override
 	public TiendaVirtual deleteTiendaVirtual(TiendaVirtual tiendaVirtual) {
 		TiendaVirtual tiendaVirtualDB=tiendaVirtualRepository.findByNumberId(tiendaVirtual.getId());
-		if(tiendaVirtualDB!=null) {
+		if(tiendaVirtualDB==null) {
 			return null;
 		}
 		tiendaVirtualRepository.delete(tiendaVirtualDB);
@@ -53,7 +53,7 @@ public class TiendaVirtualServiceImpl implements TiendaVirtualService{
 	@Override
 	public TiendaVirtual getTiendaVirtual(Integer id) {
 		TiendaVirtual tiendaVirtualDB=tiendaVirtualRepository.findByNumberId(id);
-		if(tiendaVirtualDB!=null) {
+		if(tiendaVirtualDB==null) {
 			return null;
 		}
 		return tiendaVirtualDB;

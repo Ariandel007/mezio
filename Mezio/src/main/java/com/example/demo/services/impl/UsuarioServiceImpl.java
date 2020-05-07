@@ -44,7 +44,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 	@Override
 	public Usuario deleteUsuario(Usuario usuario) {
 		Usuario usuarioDB=usuarioRepository.findByNumberId(usuario.getId());
-		if(usuarioDB!=null) {
+		if(usuarioDB==null) {
 			return null;
 		}
 		usuarioRepository.delete(usuarioDB);
@@ -54,7 +54,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 	@Override
 	public Usuario getUsuario(Integer id) {
 		Usuario usuarioDB=usuarioRepository.findByNumberId(id);
-		if(usuarioDB!=null) {
+		if(usuarioDB==null) {
 			return null;
 		}
 		return usuarioDB;

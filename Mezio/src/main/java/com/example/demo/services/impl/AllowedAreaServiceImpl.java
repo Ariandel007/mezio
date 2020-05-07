@@ -22,12 +22,9 @@ public class AllowedAreaServiceImpl implements AllowedAreaService{
     	//System.out.println(AreaObj);
     	Double AreaNuevaMuebles = AreaMuebles + Areaobj;
     	//System.out.println(AreaNuevaMuebles);
-    	if(AreaNuevaMuebles > AreaMaximaPermitida) {
-    		return false;
-    	}
-    	else {
+    	if(AreaNuevaMuebles <= AreaMaximaPermitida) {
     		lst.add(obj);
-    		return true;
     	}
+    	return AreaNuevaMuebles <= AreaMaximaPermitida;
     }
 }

@@ -43,7 +43,7 @@ public class SubCategoriaServiceImpl implements SubCategoriaService{
 	@Override
 	public SubCategoria deleteSubCategoria(SubCategoria subCategoria) {
 		SubCategoria subCategoriaDB=subCategoriaRepository.findByNumberId(subCategoria.getId());
-		if(subCategoriaDB!=null) {
+		if(subCategoriaDB==null) {
 			return null;
 		}
 		subCategoriaRepository.delete(subCategoriaDB);
@@ -53,7 +53,7 @@ public class SubCategoriaServiceImpl implements SubCategoriaService{
 	@Override
 	public SubCategoria getSubCategoria(Integer id) {
 		SubCategoria subCategoriaDB=subCategoriaRepository.findByNumberId(id);
-		if(subCategoriaDB!=null) {
+		if(subCategoriaDB==null) {
 			return null;
 		}
 		return subCategoriaDB;

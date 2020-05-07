@@ -49,7 +49,7 @@ public class MueblePlantillaServiceImpl implements MueblePlantillaService{
 	@Override
 	public MueblePlantilla deleteMueblePlantilla(MueblePlantilla mueblePlantilla) {
 		MueblePlantilla mueblePlantillaDB=mueblePlantillaRepository.findByNumberId(mueblePlantilla.getId());
-		if(mueblePlantillaDB!=null) {
+		if(mueblePlantillaDB==null) {
 			return null;
 		}
 		mueblePlantillaRepository.delete(mueblePlantillaDB);
@@ -59,7 +59,7 @@ public class MueblePlantillaServiceImpl implements MueblePlantillaService{
 	@Override
 	public MueblePlantilla getMueblePlantilla(Integer id) {
 		MueblePlantilla mueblePlantillaDB=mueblePlantillaRepository.findByNumberId(id);
-		if(mueblePlantillaDB!=null) {
+		if(mueblePlantillaDB==null) {
 			return null;
 		}
 		return mueblePlantillaDB;

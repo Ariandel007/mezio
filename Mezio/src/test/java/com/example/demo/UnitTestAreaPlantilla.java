@@ -30,7 +30,7 @@ public class UnitTestAreaPlantilla {
 				"icono chido", null, null, "Barroco", "www.barroco.com", null);
 		
 		//Plantilla
-		Plantilla plantilla = new Plantilla(1, 1.0, 1.0, 1.0, "{}", null, null);
+		Plantilla plantilla = new Plantilla(1, 100.0, 100.0, 100.0, "{}", null, null);
 
 		// MueblePlantilla
 		MueblePlantilla mueblePlantilla = new MueblePlantilla(1, plantilla, mueble, 4.7, 5.4, 1.0);
@@ -49,7 +49,7 @@ public class UnitTestAreaPlantilla {
 		lst2=lst;
 		lst2.add(mueblePlantilla3);
 		
-		assertFalse(serv.allowedArea(lst, mueblePlantilla3, plantilla));
+		assertTrue(serv.allowedArea(lst, mueblePlantilla3, plantilla));
 		
 	}
 
