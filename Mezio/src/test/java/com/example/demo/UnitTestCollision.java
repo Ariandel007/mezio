@@ -35,7 +35,7 @@ public class UnitTestCollision {
 								"icono chido", null, null, "Barroco", "www.barroco.com", null);
 		//Mueble
 		Mueble mueble2 = new Mueble(2, "Mueble Chido", 1.3, 1.2, 1.3, "Mueble chido para gente chida", "imagen chida",
-								"icono chido", null, null, "Barroco", "www.barroco.com", null);
+								"icono chido", subcategoria, null, "Barroco", "www.barroco.com", null);
 						
 		//Plantilla
 		Plantilla plantilla = new Plantilla(1, 1.0, 1.0, 1.0, "{}", null, null);
