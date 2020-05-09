@@ -20,10 +20,9 @@ import com.example.demo.models.TiendaVirtual;
 import com.example.demo.services.AllowedAreaService;
 import com.example.demo.services.CollisionService;
 import com.example.demo.services.ValidationService;
-import com.example.demo.services.impl.AllowedAreaServiceImpl;
 import com.example.demo.services.impl.CollisionServiceImpl;
 
-public class IntegralTest1 {
+public class IntegralTest1Mockito {
 
 	@Test
 	public void test() {
@@ -88,7 +87,9 @@ public class IntegralTest1 {
 		lst.add(mueblePlantilla2);
 		
 		
-		AllowedAreaService areaService= new AllowedAreaServiceImpl();
+		AllowedAreaService areaService= 
+				mock(AllowedAreaService.class);
+		when(areaService.allowedArea(lst, mueblePlantilla3, plantilla)).thenReturn(true);
 		
 		CollisionService collisionService = new CollisionServiceImpl();
 		ValidationService validationService = new ValidationService();
