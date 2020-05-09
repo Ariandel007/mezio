@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,9 +13,7 @@ import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
 import com.example.demo.models.SubCategoria;
 import com.example.demo.services.CollisionService;
-import com.example.demo.services.PlantillaService;
 import com.example.demo.services.impl.CollisionServiceImpl;
-import com.example.demo.services.impl.PlantillaServiceImpl;
 
 public class UnitTestCollision {
 

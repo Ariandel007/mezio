@@ -11,11 +11,7 @@ import com.example.demo.models.Mueble;
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
 import com.example.demo.services.AllowedAreaService;
-import com.example.demo.services.MueblePlantillaService;
-import com.example.demo.services.PlantillaService;
 import com.example.demo.services.impl.AllowedAreaServiceImpl;
-import com.example.demo.services.impl.MueblePlantillaServiceImpl;
-import com.example.demo.services.impl.PlantillaServiceImpl;
 
 public class UnitTestAreaPlantilla {
 

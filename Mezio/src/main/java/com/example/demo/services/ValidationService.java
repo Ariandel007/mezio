@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
-import com.example.demo.services.impl.AllowedAreaServiceImpl;
-import com.example.demo.services.impl.CollisionServiceImpl;
 
 public class ValidationService {
 

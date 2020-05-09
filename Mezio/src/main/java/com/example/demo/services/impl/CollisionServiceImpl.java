@@ -15,9 +15,9 @@ public class CollisionServiceImpl implements CollisionService{
             {
                 continue;
             }
-            else if ((lst.get(i).getCoordX().equals(obj.getCoordX()) ) && (lst.get(i).getCoordY().equals(obj.getCoordY())) ||
-                    ( ( obj.getCoordX() > lst.get(i).getCoordX() && obj.getCoordX() < lst.get(i).getCoordX() + lst.get(i).getMueble().getAncho())
-                            && (obj.getCoordY() > lst.get(i).getCoordY() && obj.getCoordY() < lst.get(i).getCoordY() + lst.get(i).getMueble().getLargo())))
+            else if (lst.get(i).getCoordX().equals(obj.getCoordX()) && lst.get(i).getCoordY().equals(obj.getCoordY()) ||
+                    obj.getCoordX() > lst.get(i).getCoordX() && obj.getCoordX() < lst.get(i).getCoordX() + lst.get(i).getMueble().getAncho()
+                    && (obj.getCoordY() > lst.get(i).getCoordY() && obj.getCoordY() < lst.get(i).getCoordY() + lst.get(i).getMueble().getLargo()))
                 return true;
         }
         return false;

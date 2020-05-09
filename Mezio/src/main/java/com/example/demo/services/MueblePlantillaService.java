@@ -4,7 +4,6 @@ import java.util.List;
 
 
 import com.example.demo.models.MueblePlantilla;
-import com.example.demo.models.Plantilla;
 
 public interface MueblePlantillaService {
 	List<MueblePlantilla> findMueblePlantillaAll();

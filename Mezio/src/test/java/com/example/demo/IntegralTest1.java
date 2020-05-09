@@ -19,11 +19,8 @@ import com.example.demo.models.SubCategoria;
 import com.example.demo.models.TiendaVirtual;
 import com.example.demo.services.AllowedAreaService;
 import com.example.demo.services.CollisionService;
-import com.example.demo.services.MueblePlantillaService;
 import com.example.demo.services.ValidationService;
-import com.example.demo.services.impl.AllowedAreaServiceImpl;
 import com.example.demo.services.impl.CollisionServiceImpl;
-import com.example.demo.services.impl.MueblePlantillaServiceImpl;
 
 public class IntegralTest1 {
 

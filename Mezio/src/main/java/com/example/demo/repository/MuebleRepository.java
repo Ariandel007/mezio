@@ -6,7 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.models.Categoria;
 import com.example.demo.models.Mueble;
 import com.example.demo.models.SubCategoria;
 import com.example.demo.models.TiendaVirtual;
