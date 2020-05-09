@@ -22,12 +22,12 @@ public class MueblePlantillaServiceImpl implements MueblePlantillaService{
 
 	@Override
 	public MueblePlantilla createMueblePlantilla(MueblePlantilla mueblePlantilla) {
-		MueblePlantilla MueblePlantillaDB=mueblePlantillaRepository.findByNumberId(mueblePlantilla.getId());
-		if(MueblePlantillaDB!=null) {
+		MueblePlantilla mueblePlantillaDB=mueblePlantillaRepository.findByNumberId(mueblePlantilla.getId());
+		if(mueblePlantillaDB!=null) {
 			return null;
 		}
-		MueblePlantillaDB=mueblePlantillaRepository.save(mueblePlantilla);
-		return MueblePlantillaDB;
+		mueblePlantillaDB=mueblePlantillaRepository.save(mueblePlantilla);
+		return mueblePlantillaDB;
 	}
 
 	@Override

@@ -20,12 +20,12 @@ public class TiendaVirtualServiceImpl implements TiendaVirtualService{
 
 	@Override
 	public TiendaVirtual createTiendaVirtual(TiendaVirtual tiendaVirtual) {
-		TiendaVirtual TiendaVirtualDB=tiendaVirtualRepository.findByNumberId(tiendaVirtual.getId());
-		if(TiendaVirtualDB!=null) {
+		TiendaVirtual tiendaVirtualDB=tiendaVirtualRepository.findByNumberId(tiendaVirtual.getId());
+		if(tiendaVirtualDB!=null) {
 			return null;
 		}
-		TiendaVirtualDB=tiendaVirtualRepository.save(tiendaVirtual);
-		return TiendaVirtualDB;
+		tiendaVirtualDB=tiendaVirtualRepository.save(tiendaVirtual);
+		return tiendaVirtualDB;
 	}
 
 	@Override

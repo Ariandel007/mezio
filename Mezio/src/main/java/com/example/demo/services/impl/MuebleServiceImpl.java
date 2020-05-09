@@ -20,12 +20,12 @@ public class MuebleServiceImpl implements MuebleService{
 
 	@Override
 	public Mueble createMueble(Mueble mueble) {
-		Mueble MuebleDB=muebleRepository.findByNumberId(mueble.getId());
-		if(MuebleDB!=null) {
+		Mueble muebleDB=muebleRepository.findByNumberId(mueble.getId());
+		if(muebleDB!=null) {
 			return null;
 		}
-		MuebleDB=muebleRepository.save(mueble);
-		return MuebleDB;
+		muebleDB=muebleRepository.save(mueble);
+		return muebleDB;
 	}
 
 	@Override

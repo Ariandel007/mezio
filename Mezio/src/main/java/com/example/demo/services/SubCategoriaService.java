@@ -8,9 +8,9 @@ public interface SubCategoriaService {
 	
 	List<SubCategoria> findSubCategoriaAll();
 	
-	SubCategoria createSubCategoria(SubCategoria SubCategoria);
-	SubCategoria updateSubCategoria(SubCategoria SubCategoria);
-	SubCategoria deleteSubCategoria(SubCategoria SubCategoria);
+	SubCategoria createSubCategoria(SubCategoria subCategoria);
+	SubCategoria updateSubCategoria(SubCategoria subCategoria);
+	SubCategoria deleteSubCategoria(SubCategoria subCategoria);
 	
 	SubCategoria getSubCategoria(Integer id);
 }

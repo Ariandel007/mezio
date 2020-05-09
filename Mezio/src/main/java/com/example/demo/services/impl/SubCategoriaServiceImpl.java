@@ -20,12 +20,12 @@ public class SubCategoriaServiceImpl implements SubCategoriaService{
 
 	@Override
 	public SubCategoria createSubCategoria(SubCategoria subCategoria) {
-		SubCategoria SubCategoriaDB=subCategoriaRepository.findByNumberId(subCategoria.getId());
-		if(SubCategoriaDB!=null) {
+		SubCategoria subCategoriaDB=subCategoriaRepository.findByNumberId(subCategoria.getId());
+		if(subCategoriaDB!=null) {
 			return null;
 		}
-		SubCategoriaDB=subCategoriaRepository.save(subCategoria);
-		return SubCategoriaDB;
+		subCategoriaDB=subCategoriaRepository.save(subCategoria);
+		return subCategoriaDB;
 	}
 
 	@Override

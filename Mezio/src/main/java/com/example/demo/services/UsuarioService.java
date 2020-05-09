@@ -8,9 +8,9 @@ public interface UsuarioService {
 
 	List<Usuario> findUsuarioAll();
 	
-	Usuario createUsuario(Usuario Usuario);
-	Usuario updateUsuario(Usuario Usuario);
-	Usuario deleteUsuario(Usuario Usuario);
+	Usuario createUsuario(Usuario usuario);
+	Usuario updateUsuario(Usuario usuario);
+	Usuario deleteUsuario(Usuario usuario);
 	
 	Usuario getUsuario(Integer id);
 }

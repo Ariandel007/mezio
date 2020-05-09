@@ -20,12 +20,12 @@ public class PaqueteServiceImpl implements PaqueteService{
 
 	@Override
 	public Paquete createPaquete(Paquete paquete) {
-		Paquete PaqueteDB=paqueteRepository.findByNumberId(paquete.getId());
-		if(PaqueteDB!=null) {
+		Paquete paqueteDB=paqueteRepository.findByNumberId(paquete.getId());
+		if(paqueteDB!=null) {
 			return null;
 		}
-		PaqueteDB=paqueteRepository.save(paquete);
-		return PaqueteDB;
+		paqueteDB=paqueteRepository.save(paquete);
+		return paqueteDB;
 	}
 
 	@Override

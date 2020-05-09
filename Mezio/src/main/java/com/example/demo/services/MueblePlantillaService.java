@@ -8,8 +8,8 @@ import com.example.demo.models.MueblePlantilla;
 public interface MueblePlantillaService {
 	List<MueblePlantilla> findMueblePlantillaAll();
 	
-	MueblePlantilla createMueblePlantilla(MueblePlantilla MueblePlantilla);
-	MueblePlantilla updateMueblePlantilla(MueblePlantilla MueblePlantilla);
-	MueblePlantilla deleteMueblePlantilla(MueblePlantilla MueblePlantilla);
+	MueblePlantilla createMueblePlantilla(MueblePlantilla mueblePlantilla);
+	MueblePlantilla updateMueblePlantilla(MueblePlantilla mueblePlantilla);
+	MueblePlantilla deleteMueblePlantilla(MueblePlantilla mueblePlantilla);
 	MueblePlantilla getMueblePlantilla(Integer id);
 }

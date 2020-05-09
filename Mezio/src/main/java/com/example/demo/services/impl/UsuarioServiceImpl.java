@@ -20,12 +20,12 @@ public class UsuarioServiceImpl implements UsuarioService{
 
 	@Override
 	public Usuario createUsuario(Usuario usuario) {
-		Usuario UsuarioDB=usuarioRepository.findByNumberId(usuario.getId());
-		if(UsuarioDB!=null) {
+		Usuario usuarioDB=usuarioRepository.findByNumberId(usuario.getId());
+		if(usuarioDB!=null) {
 			return null;
 		}
-		UsuarioDB=usuarioRepository.save(usuario);
-		return UsuarioDB;
+		usuarioDB=usuarioRepository.save(usuario);
+		return usuarioDB;
 	}
 
 	@Override

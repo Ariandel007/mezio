@@ -8,9 +8,9 @@ public interface TiendaVirtualService {
 
 	List<TiendaVirtual> findTiendaVirtualAll();
 	
-	TiendaVirtual createTiendaVirtual(TiendaVirtual TiendaVirtual);
-	TiendaVirtual updateTiendaVirtual(TiendaVirtual TiendaVirtual);
-	TiendaVirtual deleteTiendaVirtual(TiendaVirtual TiendaVirtual);
+	TiendaVirtual createTiendaVirtual(TiendaVirtual tiendaVirtual);
+	TiendaVirtual updateTiendaVirtual(TiendaVirtual tiendaVirtual);
+	TiendaVirtual deleteTiendaVirtual(TiendaVirtual tiendaVirtual);
 	
 	TiendaVirtual getTiendaVirtual(Integer id);
 }

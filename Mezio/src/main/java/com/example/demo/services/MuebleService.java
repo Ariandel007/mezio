@@ -8,9 +8,9 @@ public interface MuebleService {
 
 	List<Mueble> findMuebleAll();
 	
-	Mueble createMueble(Mueble Mueble);
-	Mueble updateMueble(Mueble Mueble);
-	Mueble deleteMueble(Mueble Mueble);
+	Mueble createMueble(Mueble mueble);
+	Mueble updateMueble(Mueble mueble);
+	Mueble deleteMueble(Mueble mueble);
 	
 	Mueble getMueble(Integer id);
 }

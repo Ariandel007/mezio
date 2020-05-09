@@ -8,9 +8,9 @@ public interface PaqueteService {
 
 	List<Paquete> findPaqueteAll();
 	
-	Paquete createPaquete(Paquete Paquete);
-	Paquete updatePaquete(Paquete Paquete);
-	Paquete deletePaquete(Paquete Paquete);
+	Paquete createPaquete(Paquete paquete);
+	Paquete updatePaquete(Paquete paquete);
+	Paquete deletePaquete(Paquete paquete);
 	
 	Paquete getPaquete(Integer id);
 }
