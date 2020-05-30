@@ -19,7 +19,7 @@ import com.example.demo.services.CategoriaService;
 @RestController
 @RequestMapping("/categoria")
 public class CategoriaController {
-    CategoriaService categoriaService;
+	CategoriaService categoriaService;
 
     @Autowired
     public CategoriaController(CategoriaService categoriaService) {
@@ -31,6 +31,28 @@ public class CategoriaController {
     public ResponseEntity<List<Categoria>> listCategorias(){
     	return ResponseEntity.ok(categoriaService.findCategoriaAll());    
     }
+    
+    @CrossOrigin
+    @RequestMapping(path="/{id}",method = RequestMethod.GET)
+    public ResponseEntity<Categoria> getCategoria(@PathVariable int id){
+        return ResponseEntity.ok(categoriaService.getCategoria(id));
+    }
+    @CrossOrigin
+    @PostMapping
+    public ResponseEntity<Categoria> create(@RequestBody Categoria categoria){
+        return ResponseEntity.ok(categoriaService.createCategoria(categoria));
+    }
+    @CrossOrigin
+    @PutMapping
+    public ResponseEntity<Categoria> update(@RequestBody Categoria categoria){ 
+    	return ResponseEntity.ok(categoriaService.updateCategoria(categoria));
+    }
+    @CrossOrigin
+    @RequestMapping(path="/{id}",method = RequestMethod.DELETE)
+    public ResponseEntity<Void> delete(@PathVariable int id){
+        return ResponseEntity.noContent().build();
+    }
+    
     
 
 }
