@@ -20,9 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.models.Mueble;
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
+import com.example.demo.services.AllowedAreaService;
+import com.example.demo.services.CollisionService;
 import com.example.demo.services.MueblePlantillaService;
 import com.example.demo.services.MuebleService;
 import com.example.demo.services.PlantillaService;
+import com.example.demo.services.ValidationService;
 
 @RestController
 @RequestMapping("/plantillas")
@@ -34,6 +37,12 @@ public class PlantillaController {
 	private MueblePlantillaService mueblePlantillaService;
 	@Autowired
 	private MuebleService muebleService;
+	@Autowired
+	private CollisionService collisionService;
+	@Autowired
+	private AllowedAreaService allowedAreaService;
+	
+	
 	
     @RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Plantilla>> listPlantillas(){
@@ -88,10 +97,29 @@ public class PlantillaController {
 		if(muebleDB==null) {
 			return ResponseEntity.notFound().build();
 		}
+
 		Plantilla plantillaDB= plantillaService.getPlantilla(plantilla_id);
 		mueblePlantilla.setMueble(muebleDB);
 		mueblePlantilla.setPlantilla(plantillaDB);
+		
+		List<MueblePlantilla> listaVerificacion = plantillaDB.getMueblePlantillas();
+		listaVerificacion.add(mueblePlantilla);
+		
+		
+		for (int i=0; i<listaVerificacion.size(); i++)
+		{
+			if(this.collisionService.thereIsCollision(listaVerificacion, listaVerificacion.get(i), i))
+			{
+				return null;
+			}
+		}
+		
+		if(!this.allowedAreaService.allowedArea(plantillaDB.getMueblePlantillas(), mueblePlantilla, plantillaDB))
+			return null;
+		
 		mueblePlantillaService.createMueblePlantilla(mueblePlantilla);
+
+		
 		return ResponseEntity.ok(plantillaDB);
 	}
 	

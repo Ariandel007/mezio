@@ -1,0 +1,138 @@
+use springroffus;
+-- Tiendas Virtuales--
+
+INSERT INTO tienda_virtual 
+VALUES (default,'Maestro', 'https://www.maestro.com.pe/');
+
+INSERT INTO tienda_virtual
+VALUES (default,'Sodimac', 'https://www.sodimac.com.pe/sodimac-pe/');
+
+INSERT INTO tienda_virtual 
+VALUES (default,'Casa Grande', 'http://casagrande.com.pe/');
+
+INSERT INTO tienda_virtual
+VALUES (default,'Casa Chica', 'http://www.mueblesalida.com/');
+
+INSERT INTO tienda_virtual
+VALUES (default,'MueblesCarlos', 'http://www.mueblescarlos.com/');
+
+INSERT INTO tienda_virtual
+VALUES (default,'MejoresMuebles', 'http://www.mejoresmuebles.com/');
+
+
+-- categoria--
+
+INSERT INTO categoria (nombre)
+VALUES ('Dormitorio');
+
+INSERT INTO categoria (nombre)
+VALUES ('Sala');
+
+INSERT INTO categoria (nombre)
+VALUES ('Comedor');
+
+INSERT INTO categoria (nombre)
+VALUES ('Baño');
+
+INSERT INTO categoria (nombre)
+VALUES ('Estudio');
+
+
+
+-- sub_categoria--
+
+
+-- -Dormitorio---
+
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Ropero', 1);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Comoda', 1);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Velador', 1);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Cabecera', 1);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Zapatera', 1);
+
+
+
+-- -Sala---
+
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Sofa', 2);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Centro de Entretenimiento', 2);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Repisa', 2);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Mesa de Centro', 2);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Sillon', 2);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Mueble Bar', 2);
+
+
+
+-- -Comedor---
+
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Juego de Comedor', 3);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Mesa de Comedor', 3);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Silla de Comedor', 3);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Aparador', 3);
+
+
+-- -Baño---
+
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Vanitorio', 4);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Gabinete', 4);
+
+
+-- -Estudio---
+
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Escritorio', 5);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Librero', 5);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Silla Ejecutiva', 5);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Estante', 5);
+
+INSERT INTO sub_categoria (nombre, id_categoria)
+VALUES ('Archivador', 5);
+
+-- -usuario -----
+
+INSERT INTO Usuario(`username`,`correo`,`password`) VALUES('Brian Sexton','aliquet.nec.imperdiet@metusIn.com','eRs9xtJus');
+INSERT INTO Usuario(`username`,`correo`,`password`) VALUES('Nicholas Jensen','at.velit@aliquet.org','3S1P3492c');
+INSERT INTO Usuario(`username`,`correo`,`password`) VALUES('Alfonso Burgess','pellentesque@et.org','g0lWmQKgz');
+INSERT INTO Usuario(`username`,`correo`,`password`) VALUES('Gavin Mcpherson','id.sapien.Cras@nibhdolor.co.uk','Q56fRceCV');
+INSERT INTO Usuario(`username`,`correo`,`password`) VALUES('Audra Donovan','dolor.sit.amet@duilectus.com','U1t78Mc8g');
