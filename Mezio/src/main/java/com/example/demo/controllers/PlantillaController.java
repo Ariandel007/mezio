@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.models.Mueble;
+import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
+import com.example.demo.services.MueblePlantillaService;
+import com.example.demo.services.MuebleService;
 import com.example.demo.services.PlantillaService;
 
 @Controller
@@ -24,6 +28,10 @@ public class PlantillaController {
 	
 	@Autowired
 	private PlantillaService plantillaService;
+	@Autowired
+	private MueblePlantillaService mueblePlantillaService;
+	@Autowired
+	private MuebleService muebleService;
 	
 	@GetMapping
 	public ResponseEntity<List<Plantilla>> listPlantillas(){
@@ -71,4 +79,18 @@ public class PlantillaController {
 		Plantilla deletedPlantilla=plantillaService.deletePlantilla(plantillaDB);
 		return ResponseEntity.ok(deletedPlantilla);
 	}
+	
+	@PutMapping("/{plantilla_id}/addMueble/{mueble_id}")
+	public ResponseEntity<Plantilla> addmueble(@PathVariable("plantilla_id") Integer plantilla_id, @PathVariable("mueble_id")Integer mueble_id, @RequestBody MueblePlantilla mueblePlantilla){
+		Mueble muebleDB= muebleService.getMueble(mueble_id);
+		if(muebleDB==null) {
+			return ResponseEntity.notFound().build();
+		}
+		Plantilla plantillaDB= plantillaService.getPlantilla(plantilla_id);
+		mueblePlantilla.setMueble(muebleDB);
+		mueblePlantilla.setPlantilla(plantillaDB);
+		mueblePlantillaService.createMueblePlantilla(mueblePlantilla);
+		return ResponseEntity.ok(plantillaDB);
+	}
+	
 }
