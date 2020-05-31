@@ -34,7 +34,7 @@ public class CategoriaController {
     
     @CrossOrigin
     @RequestMapping(path="/{id}",method = RequestMethod.GET)
-    public ResponseEntity<Categoria> getCategoria(@PathVariable int id){
+    public ResponseEntity<Categoria> getCategoria(@PathVariable Integer id){
         return ResponseEntity.ok(categoriaService.getCategoria(id));
     }
     @CrossOrigin
@@ -49,7 +49,7 @@ public class CategoriaController {
     }
     @CrossOrigin
     @RequestMapping(path="/{id}",method = RequestMethod.DELETE)
-    public ResponseEntity<Void> delete(@PathVariable int id){
+    public ResponseEntity<Void> delete(@PathVariable Integer id){
     	Categoria categoriaEliminar = categoriaService.getCategoria(id);
     	categoriaService.deleteCategoria(categoriaEliminar);
         return ResponseEntity.noContent().build();

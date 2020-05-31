@@ -42,7 +42,7 @@ public class CategoriaServiceImpl implements CategoriaService{
 	@Override
 	public Categoria deleteCategoria(Categoria categoria) {
 		Categoria categoriaDB=categoriaRepository.findByNumberId(categoria.getId());
-		if(categoriaDB!=null) {
+		if(categoriaDB==null) {
 			return null;
 		}
 		categoriaRepository.delete(categoriaDB);
@@ -52,7 +52,7 @@ public class CategoriaServiceImpl implements CategoriaService{
 	@Override
 	public Categoria getCategoria(Integer id) {
 		Categoria categoriaDB=categoriaRepository.findByNumberId(id);
-		if(categoriaDB!=null) {
+		if(categoriaDB==null) {
 			return null;
 		}
 		return categoriaDB;

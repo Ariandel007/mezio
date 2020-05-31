@@ -22,7 +22,7 @@ public class PlantillaServiceImpl implements PlantillaService{
 	@Override
 	public Plantilla createPlantilla(Plantilla plantilla) {
 		Plantilla plantillaDB=plantillaRepository.findByNumberId(plantilla.getId());
-		if(plantillaDB==null) {
+		if(plantillaDB!=null) {
 			return null;
 		}
 		plantillaDB=plantillaRepository.save(plantilla);
