@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.Mueble;
 import com.example.demo.models.MueblePlantilla;
@@ -22,7 +23,7 @@ import com.example.demo.services.MueblePlantillaService;
 import com.example.demo.services.MuebleService;
 import com.example.demo.services.PlantillaService;
 
-@Controller
+@RestController
 @RequestMapping("/plantillas")
 public class PlantillaController {
 	

@@ -27,7 +27,7 @@ public class CategoriaController {
     }
     
     @CrossOrigin
-    @RequestMapping
+    @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<List<Categoria>> listCategorias(){
     	return ResponseEntity.ok(categoriaService.findCategoriaAll());    
     }

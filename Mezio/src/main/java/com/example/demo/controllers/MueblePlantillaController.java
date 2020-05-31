@@ -14,11 +14,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.services.MueblePlantillaService;
 
-@Controller
+@RestController
 @RequestMapping("/mueblePlantillas")
 public class MueblePlantillaController {
 	

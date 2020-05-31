@@ -26,7 +26,7 @@ public class UsuarioController {
         this.usuarioService=usuarioService;
     }
     @CrossOrigin
-    @RequestMapping
+    @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity <List<Usuario>> listUsuarios(){    
     	return ResponseEntity.ok(usuarioService.findUsuarioAll());    
     }
