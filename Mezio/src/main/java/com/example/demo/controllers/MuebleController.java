@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.models.Mueble;
@@ -26,7 +27,7 @@ public class MuebleController {
 	@Autowired
 	private MuebleService muebleService;
 	
-	@GetMapping
+    @RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Mueble>> listMuebles(){
 		List<Mueble> muebles= muebleService.findMuebleAll();
 		if(muebles.isEmpty()) {

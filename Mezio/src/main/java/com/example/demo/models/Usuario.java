@@ -28,7 +28,10 @@ public class Usuario {
 		this.correo = correo;
 		this.password = password;
 	}
-
+	
+	public Usuario() {
+		super();
+	}
 	public Integer getId() {
 		return id;
 	}

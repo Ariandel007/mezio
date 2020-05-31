@@ -28,6 +28,10 @@ public class Paquete {
 		this.usuario = usuario;
 	}
 
+	public Paquete() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}
