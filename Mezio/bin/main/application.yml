@@ -19,5 +19,5 @@ spring:
     url: jdbc:mysql://${DOCKER_HOST:localhost}/springroffus?serverTimezone=UTC
 #    url: jdbc:mysql://localhost:3306/springroffus
     username: root
-    password: 
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
