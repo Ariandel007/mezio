@@ -53,7 +53,7 @@ public class MuebleServiceImpl implements MuebleService{
 	@Override
 	public Mueble deleteMueble(Mueble mueble) {
 		Mueble muebleDB=muebleRepository.findByNumberId(mueble.getId());
-		if(muebleDB!=null) {
+		if(muebleDB==null) {
 			return null;
 		}
 		muebleRepository.delete(muebleDB);
