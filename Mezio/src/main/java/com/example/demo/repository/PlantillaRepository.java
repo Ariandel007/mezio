@@ -13,7 +13,7 @@ public interface PlantillaRepository extends JpaRepository<Plantilla,Integer> {
 
 	List<Plantilla> findByPaquete(Paquete paquete);
 	
-    @Query(value="select from plantilla where id=?1",nativeQuery = true)
+    @Query(value="select * from plantilla where id=?1",nativeQuery = true)
 	Plantilla findByNumberId(Integer id);
 	
 }

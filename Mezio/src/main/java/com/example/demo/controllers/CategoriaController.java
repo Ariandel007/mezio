@@ -40,7 +40,8 @@ public class CategoriaController {
     @CrossOrigin
     @PostMapping
     public ResponseEntity<Categoria> create(@RequestBody Categoria categoria){
-        return ResponseEntity.ok(categoriaService.createCategoria(categoria));
+    	categoriaService.createCategoria(categoria);
+        return ResponseEntity.ok(categoria);
     }
     @CrossOrigin
     @PutMapping

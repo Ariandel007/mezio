@@ -7,6 +7,6 @@ import com.example.demo.models.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario,Integer> {
 
-    @Query(value="select from usuario where id=?1",nativeQuery = true)
+    @Query(value="select * from usuario where id=?1",nativeQuery = true)
 	Usuario findByNumberId(Integer id);
 }

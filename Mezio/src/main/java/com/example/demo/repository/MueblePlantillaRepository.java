@@ -15,7 +15,7 @@ public interface MueblePlantillaRepository extends JpaRepository<MueblePlantilla
 	List<MueblePlantilla> findByPlantilla(Plantilla plantilla);
 	List<MueblePlantilla> findAll();
 	
-    @Query(value="select from mueble_plantilla where id=?1",nativeQuery = true)
+    @Query(value="select * from mueble_plantilla where id=?1",nativeQuery = true)
 	MueblePlantilla findByNumberId(Integer id);
     
 }

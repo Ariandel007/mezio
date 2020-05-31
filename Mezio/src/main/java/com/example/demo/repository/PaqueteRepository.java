@@ -14,6 +14,6 @@ public interface PaqueteRepository extends JpaRepository<Paquete,Integer> {
 	
 	List<Paquete> findByUsuario(Usuario usuario);
 	
-    @Query(value="select from paquete where id=?1",nativeQuery = true)
+    @Query(value="select * from paquete where id=?1",nativeQuery = true)
 	Paquete findByNumberId(Integer id);
 }

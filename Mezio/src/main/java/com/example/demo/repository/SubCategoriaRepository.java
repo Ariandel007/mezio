@@ -13,6 +13,6 @@ public interface SubCategoriaRepository extends JpaRepository<SubCategoria,Integ
 
 	List<SubCategoria> findByCategoria(Categoria categoria);
 	
-    @Query(value="select from sub_categoria where id=?1",nativeQuery = true)
+    @Query(value="select * from sub_categoria where id=?1",nativeQuery = true)
 	SubCategoria findByNumberId(Integer id);
 }

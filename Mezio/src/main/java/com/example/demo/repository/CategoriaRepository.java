@@ -12,6 +12,6 @@ import com.example.demo.models.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria,Integer>{
 
-    @Query(value="select from categoria where id=?1",nativeQuery = true)
+    @Query(value="select * from categoria where id=?1",nativeQuery = true)
 	Categoria findByNumberId(Integer id);
 }

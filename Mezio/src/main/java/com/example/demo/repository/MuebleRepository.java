@@ -16,6 +16,6 @@ public interface MuebleRepository extends JpaRepository<Mueble,Integer> {
 	List<Mueble> findBySubCategoria(SubCategoria subCategoria);
 	List<Mueble> findByTiendaVirtual(TiendaVirtual tiendavirtual);
 	
-    @Query(value="select  from mueble where id=?1",nativeQuery = true)
+    @Query(value="select * from mueble where id=?1",nativeQuery = true)
 	Mueble findByNumberId(Integer id);
 }
