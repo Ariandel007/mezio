@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class Mueble {
@@ -68,7 +70,7 @@ public class Mueble {
 
     private String url;
     
-    
+	@JsonIgnore
     @OneToMany(mappedBy = "mueble")
     List<MueblePlantilla> mueblePlantillas;
 
@@ -192,7 +194,7 @@ public class Mueble {
 		this.url = url;
 	}
 
-
+	@JsonIgnore
 	public List<MueblePlantilla> getMueblePlantillas() {
 		return mueblePlantillas;
 	}

@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class MueblePlantilla {
@@ -16,6 +18,7 @@ public class MueblePlantilla {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
  
+	@JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_Plantilla")
     private Plantilla plantilla;
@@ -53,6 +56,7 @@ public class MueblePlantilla {
 		this.id = id;
 	}
 
+	@JsonIgnore
 	public Plantilla getPlantilla() {
 		return plantilla;
 	}
