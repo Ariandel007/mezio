@@ -50,9 +50,10 @@ public class CategoriaController {
     @CrossOrigin
     @RequestMapping(path="/{id}",method = RequestMethod.DELETE)
     public ResponseEntity<Void> delete(@PathVariable int id){
+    	Categoria categoriaEliminar = categoriaService.getCategoria(id);
+    	categoriaService.deleteCategoria(categoriaEliminar);
         return ResponseEntity.noContent().build();
     }
-    
     
 
 }
