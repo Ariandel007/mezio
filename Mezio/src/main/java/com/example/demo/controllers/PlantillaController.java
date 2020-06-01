@@ -92,7 +92,7 @@ public class PlantillaController {
 	}
 	
 	@PutMapping("/{plantilla_id}/addMueble/{mueble_id}")
-	public ResponseEntity<Plantilla> addmueble(@PathVariable("plantilla_id") Integer plantilla_id, @PathVariable("mueble_id")Integer mueble_id, @RequestBody MueblePlantilla mueblePlantilla){
+	public ResponseEntity<?> addmueble(@PathVariable("plantilla_id") Integer plantilla_id, @PathVariable("mueble_id")Integer mueble_id, @RequestBody MueblePlantilla mueblePlantilla){
 		Mueble muebleDB= muebleService.getMueble(mueble_id);
 		if(muebleDB==null) {
 			return ResponseEntity.notFound().build();
@@ -103,24 +103,32 @@ public class PlantillaController {
 		mueblePlantilla.setPlantilla(plantillaDB);
 		
 		List<MueblePlantilla> listaVerificacion = plantillaDB.getMueblePlantillas();
-		listaVerificacion.add(mueblePlantilla);
+		//listaVerificacion.add(mueblePlantilla);
+		
+		if(!allowedAreaService.allowedArea(listaVerificacion, mueblePlantilla, plantillaDB))
+			return  ResponseEntity
+		            .status(HttpStatus.FORBIDDEN)
+		            .body("excede Area");
 		
 		
 		for (int i=0; i<listaVerificacion.size(); i++)
 		{
-			if(this.collisionService.thereIsCollision(listaVerificacion, listaVerificacion.get(i), i))
+			if(collisionService.thereIsCollision(listaVerificacion, listaVerificacion.get(i), i))
 			{
-				return null;
+				return  ResponseEntity
+			            .status(HttpStatus.FORBIDDEN)
+			            .body("Hay colision");
+
 			}
 		}
 		
-		if(!this.allowedAreaService.allowedArea(plantillaDB.getMueblePlantillas(), mueblePlantilla, plantillaDB))
-			return null;
+		
+
 		
 		mueblePlantillaService.createMueblePlantilla(mueblePlantilla);
 
 		
-		return ResponseEntity.ok(plantillaDB);
+		return ResponseEntity.ok(plantillaService.getPlantilla(plantilla_id));
 	}
 	
 }

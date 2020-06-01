@@ -2,9 +2,12 @@ package com.example.demo.services.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.services.CollisionService;
 
+@Service
 public class CollisionServiceImpl implements CollisionService{
 
 	@Override

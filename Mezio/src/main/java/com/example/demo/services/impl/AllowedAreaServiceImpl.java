@@ -2,10 +2,13 @@ package com.example.demo.services.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.example.demo.models.MueblePlantilla;
 import com.example.demo.models.Plantilla;
 import com.example.demo.services.AllowedAreaService;
 
+@Service
 public class AllowedAreaServiceImpl implements AllowedAreaService{
 	@Override
 	public boolean allowedArea(List<MueblePlantilla> lst, MueblePlantilla obj, Plantilla pl) {
